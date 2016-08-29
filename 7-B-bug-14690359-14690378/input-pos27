@@ -1,0 +1,45 @@
+44 46
+alloc 28
+alloc 36
+defragment
+erase -937404236
+alloc 71
+defragment
+alloc 81
+alloc 51
+erase 3
+defragment
+alloc 48
+erase 1
+defragment
+alloc 36
+defragment
+defragment
+erase 1
+defragment
+defragment
+erase -1173350787
+alloc 94
+erase 5
+defragment
+erase 9
+alloc 98
+erase 7
+defragment
+erase 5
+erase 1
+defragment
+erase 2
+defragment
+erase 4
+defragment
+erase 9
+alloc 8
+defragment
+erase 9
+defragment
+defragment
+defragment
+erase 1
+alloc 70
+erase 9

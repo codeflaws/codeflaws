@@ -1,0 +1,11 @@
+10 10
+alloc 10
+erase -1
+erase 1
+alloc 5
+erase -1
+alloc 5
+erase 0
+alloc 5
+erase 0
+alloc 5

@@ -1,0 +1,11 @@
+10
+typeof void
+typedef void voiddd
+typeof &&&&&voiddd*********
+typeof &&&&&voidddd*********
+typedef aaaa bbbb
+typeof bbbb
+typeof aaaa
+typedef void** aaaa
+typeof aaaa
+typeof bbbb

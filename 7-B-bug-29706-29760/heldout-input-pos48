@@ -1,0 +1,17 @@
+16 10
+alloc 10
+defragment
+defragment
+defragment
+alloc 10
+erase 1
+erase 2
+alloc 6
+defragment
+defragment
+alloc 4
+defragment
+defragment
+erase 2
+defragment
+alloc 6

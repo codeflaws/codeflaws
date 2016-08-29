@@ -1,0 +1,15 @@
+14 100
+alloc 99
+alloc 1
+alloc 1
+erase 2
+alloc 1
+erase 4
+erase 1
+alloc 100
+alloc 1
+alloc 99
+defragment
+erase 4
+alloc 100
+alloc 99

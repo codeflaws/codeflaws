@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<math.h>
+int main(int argc, char *argv[])
+{
+	int n,t[92]={0},i,j,a,flag=0;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&t[i]);
+	}
+	for(i=1;i<=n;i++)
+	{
+		if((t[i]-t[i-1])>15)
+		{
+			flag=1;
+			break;
+		}
+	}
+	if(i>n)
+	{
+		i=n;
+	}
+	if(flag==1)
+	{
+		if(t[i-1]+15<=90)
+		{
+			printf("%d\n",t[i-1]+15);
+		}
+		else
+		{
+			printf("%d\n",90);
+		}
+	}
+	else
+	{
+		printf("Hai\n");
+		if(t[i]+15<=90)
+		{
+			printf("%d\n",t[i]+15);
+		}
+		else
+		{
+			printf("%d\n",90);
+		}
+	}
+	return 0;
+}
