@@ -1,0 +1,61 @@
+#include<stdio.h>
+int n,i,d[101]={0},a[101][2],b[101];
+int main(int argc, char *argv[])
+{
+	int j,t;
+	scanf("%d",&n);
+	j=0;
+	while(j<2)
+	{
+		i=1;
+		while(i<n)
+		{
+			scanf("%d",&a[i][j]);
+			i++;
+		}
+		j++;
+	}
+	i=1;
+	while(i<=n)
+	{
+		scanf("%d",&b[i]);
+		i++;
+	}
+	i=1;
+	j=1;
+	while(i<=n)
+	{
+	j=1;
+	while(j<i)
+	{
+		d[i]=d[i]+a[j][0];
+		j++;
+	}
+	d[i]=d[i]+b[j];
+	while(j<n)
+	{
+		d[i]=d[i]+a[j][1];
+		j++;
+	}
+	printf("%d\n",d[i]);
+	i++;
+	}
+	i=1;j=2;
+	while(i<=2)
+	{
+		j=i+1;
+		while(j<=n)
+		{
+			if(d[i]>d[j])
+			{
+				t=d[j];
+				d[j]=d[i];
+				d[i]=t;
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("%d",d[1]+d[2]);
+	return 0;	
+}

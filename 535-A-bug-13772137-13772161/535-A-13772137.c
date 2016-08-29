@@ -1,0 +1,125 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main(int argc, char *argv[])
+{
+    char str[100];
+    int len,j;
+    scanf("%s",&str);
+    len=strlen(str);
+    j=atoi(str);
+    if(j==1){
+        printf("one\n");
+    }
+    if(j==2){
+        printf("two\n");
+    }
+    if(j==3){
+        printf("three\n");
+    }
+    if(j==4){
+        printf("four\n");
+    }
+    if(j==5){
+        printf("five\n");
+    }
+    if(j==6){
+        printf("six\n");
+    }
+    if(j==7){
+        printf("seven\n");
+    }
+    if(j==8){
+        printf("eight\n");
+    }
+    if(j==9){
+        printf("nine\n");
+    }
+    if(j==10){
+        printf("ten\n");
+    }
+    if(j==11){
+        printf("eleven\n");
+    }
+    if(j==12){
+        printf("twelve\n");
+    }
+    if(j==13){
+        printf("thirteen\n");
+    }
+    if(j==14){
+        printf("fourteen\n");
+    }
+    if(j==15){
+        printf("fifteen\n");
+    }
+    if(j==16){
+        printf("sixteen\n");
+    }
+    if(j==17){
+        printf("seventeen\n");
+    }
+    if(j==18){
+        printf("eighteen\n");
+    }
+    if(j==19){
+        printf("nineteen\n");
+    }
+    if((len==2) && str[0]!='1'){
+        if(str[0]=='2'){
+            printf("twenty");
+        }
+        if(str[0]=='3'){
+            printf("thirty");
+        }
+        if(str[0]=='4'){
+            printf("forty");
+        }
+        if(str[0]=='5'){
+            printf("fifty");
+        }
+        if(str[0]=='6'){
+            printf("sixty");
+        }
+        if(str[0]=='7'){
+            printf("seventy");
+        }
+        if(str[0]=='8'){
+            printf("eighty");
+        }
+        if(str[0]=='9'){
+            printf("ninety");
+        }
+        if(str[1]=='1'){
+            printf("-one\n");
+        }
+        if(str[1]=='2'){
+            printf("-two\n");
+        }
+        if(str[1]=='3'){
+            printf("-three\n");
+        }
+        if(str[1]=='4'){
+            printf("-four\n");
+        }
+        if(str[1]=='5'){
+            printf("-five\n");
+        }
+        if(str[1]=='6'){
+            printf("-six\n");
+        }
+        if(str[1]=='7'){
+            printf("-seven\n");
+        }
+        if(str[1]=='8'){
+            printf("-eight\n");
+        }
+        if(str[1]=='9'){
+            printf("-nine\n");
+        }
+
+    }
+    return 0;
+}

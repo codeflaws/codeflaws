@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main(int argc, char *argv[])
+{
+    int n,m,d,e,i,j;
+    scanf("%d%d",&n,&m);
+    d=n/2;
+    if(n%2==1)
+    e=d*d+(n-d)*(n-d);
+    else
+    e=d*n;
+    if(e<m)
+    {
+        printf("NO\n");
+    }
+    else
+    {
+        printf("YES\n");
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+                if(i%2==0)
+                {
+                    if(j%2==0&&m>0){
+                    printf("L");
+                    m--;}
+                    else
+                    printf("S");
+                }
+                else
+                {
+                    if(j%2==1&&m>0){
+                    printf("L");
+                    m--;}
+                    else
+                    printf("S");
+                }
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
