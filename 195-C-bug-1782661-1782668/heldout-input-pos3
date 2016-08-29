@@ -1,0 +1,9 @@
+8
+try
+    try
+        throw ( CE ) 
+    catch ( BE, "BE in line 3")
+
+    try
+    catch(AE, "AE in line 5") 
+catch(AE,"AE somewhere")
