@@ -1,0 +1,56 @@
+#include<stdio.h>
+int main(int argc, char *argv[])
+{
+    int i,j,mat[10][10],m,v,a;
+    char c;
+    for(i=0;i<4;i++)
+    {
+        for(j=0;j<4;j++)
+        {
+            scanf("%c",&c);
+            if(c=='.')
+            mat[i][j]=1;
+            else
+            mat[i][j]=2;
+        }
+        scanf("%*c");
+    }
+    v=0;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            m=0;
+            if(mat[i][j]==mat[i][j+1])
+            m++;
+            if(mat[i][j]==mat[i+1][j])
+            m++;
+            if(mat[i][j]==mat[i+1][j+1])
+            m++;
+            if(m>=2)
+            {
+                v=1;
+            }
+            m=0;
+            if(mat[i][j]==1)
+            a=2;
+            else
+            a=1;
+            if(a==mat[i][j+1])
+            m++;
+            if(a==mat[i+1][j])
+            m++;
+            if(a==mat[i+1][j+1])
+            m++;
+            if(m>=2)
+            {
+                v=1;
+            }
+        }
+    }
+    if(v==1)
+    printf("YES\n");
+    else
+    printf("NO\n");
+    return 0;
+}
