@@ -16,13 +16,11 @@ Each folder contains:
 - Makefile.genprog for compiling the buggy submission using cilly. This is for GenProg experiments as GenProg works on CIL representation.
 
 Due to the following error for the version 10-D-bug-1434543-1434549 and 674-E-bug-17842470-17842486, we have placed the archive file for these two versions in github repository:
-
 remote: error: File ... is 732.30 MB; this exceeds GitHub's file size limit of 100.00 MB
 
 Use the following command for extracting the two versions:
 ```{r, engine='bash', count_lines}
 tar -zxvf 10-D-bug-1434543-1434549.tar.gz
-
 tar -zxvf 674-E-bug-17842470-17842486.tar.gz
 ```
 
