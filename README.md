@@ -14,6 +14,7 @@ Each folder contains:
 - Test output files: output[0-9]+ file used by Test suite (1), and  heldout-output[0-9]+ file used by Test suite (2)
 - Makefile for compiling the buggy submission. This contains the CFLAGS options recommended by Codeforces. To compile the accepted submission, use the command `make FILENAME=10-A-13543524`
 - Makefile.genprog for compiling the buggy submission using cilly. This is for GenProg experiments as GenProg works on CIL representation.
+- Test configuration for SPR that specify the name for pass/fail test: &lt;contestid&gt;-&lt;problem&gt;-&lt;buggy-submisionid&gt;.c.revlog
 
 Due to the following error for the version 10-D-bug-1434543-1434549 and 674-E-bug-17842470-17842486, we have placed the archive file for these two versions in github repository:
 remote: error: File ... is 732.30 MB; this exceeds GitHub's file size limit of 100.00 MB
