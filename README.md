@@ -20,10 +20,11 @@ Due to the following error for the version 10-D-bug-1434543-1434549 and 674-E-bu
 remote: error: File ... is 732.30 MB; this exceeds GitHub's file size limit of 100.00 MB
 
 Use the following command for extracting the two versions:
-
+```{r, engine='bash', count_lines}
 tar -zxvf 10-D-bug-1434543-1434549.tar.gz
 
 tar -zxvf 674-E-bug-17842470-17842486.tar.gz
+```
 
 For more information/questions about the benchmark, refer to the following website:
 https://codeflaws.github.io/
