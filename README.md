@@ -8,8 +8,8 @@ Each folder contains:
 - Buggy submission with name &lt;contestid&gt;-&lt;problem&gt;-&lt;buggy-submisionid&gt;.c
 - Accepted submission with name &lt;contestid&gt;-&lt;problem&gt;-&lt;accepted-submisionid&gt;.c
 - Two sets of test scripts: 
-   (1) Repair Test script (test suite given to repair tools for generating repair): test-genprog.sh is for search-based repair tools (GenProg, SPR, Prophet), test-angelix.sh is for Angelix as it requires inserting special instrumentation.
-   (2) Test script for patch validation (held-out test suite): test-genprog-valid.sh is for validating search-based repair tools (GenProg, SPR, Prophet), test-angelix.sh is for validating Angelix    
+  1. Repair Test script (test suite given to repair tools for generating repair): test-genprog.sh is for search-based repair tools (GenProg, SPR, Prophet), test-angelix.sh is for Angelix as it requires inserting special instrumentation.
+  2. Test script for patch validation (held-out test suite): test-genprog-valid.sh is for validating search-based repair tools (GenProg, SPR, Prophet), test-angelix.sh is for validating Angelix    
 - Test input files: input[0-9]+ file used by Test suite (1), and  heldout-input[0-9]+ file used by Test suite (2)
 - Test output files: output[0-9]+ file used by Test suite (1), and  heldout-output[0-9]+ file used by Test suite (2)
 - Makefile for compiling the buggy submission. This contains the CFLAGS options recommended by Codeforces. To compile the accepted submission, use the command `make FILENAME=10-A-13543524`
