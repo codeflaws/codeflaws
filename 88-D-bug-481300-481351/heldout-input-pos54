@@ -1,5 +1,0 @@
-4
-typedef void voida
-typedef voida* voidb
-typedef voidb* voidc
-typeof voidc

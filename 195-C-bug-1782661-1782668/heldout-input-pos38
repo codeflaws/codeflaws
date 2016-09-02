@@ -1,4 +1,0 @@
-3
-try
-throw ( X )
-catch ( X, "try again")

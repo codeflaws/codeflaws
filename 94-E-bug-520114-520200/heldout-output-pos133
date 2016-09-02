@@ -1,4 +1,0 @@
-3
-lea ebx, [eax + 8*eax]
-lea ecx, [eax + 2*ebx]
-lea edx, [4*ecx]

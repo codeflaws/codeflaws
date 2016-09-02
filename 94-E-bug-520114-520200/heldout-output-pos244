@@ -1,3 +1,0 @@
-2
-lea ebx, [8*eax]
-lea ecx, [8*ebx]

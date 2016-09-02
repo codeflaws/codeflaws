@@ -1,9 +1,0 @@
-8 50
-alloc 51
-defragment
-alloc 100
-defragment
-erase 1
-alloc 50
-defragment
-alloc 50
