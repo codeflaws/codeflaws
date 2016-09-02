@@ -1,0 +1,8 @@
+7 100
+alloc 100
+erase 2147483647
+erase 1
+alloc 50
+alloc 50
+erase 3
+erase -2147483648

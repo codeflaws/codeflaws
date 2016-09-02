@@ -1,0 +1,262 @@
+#include<stdio.h>
+#include<string.h>
+int lcount(int l);
+void red(int *c,int n);
+char s[1000001],s2[1000001],s3[1000001];
+int main(int argc, char *argv[])
+{
+	int c[10],i,j,l,l2,cnt,m,flag,flag2,poi,c2[10];
+	scanf("%s",s);
+	scanf("%s",s2);
+	for(i=0;i<10;i++)
+	{
+	c[i]=0;
+	c2[i]=0;
+	}
+	l=strlen(s);
+	for(i=0;i<l;i++)
+	{
+		c[s[i]-'0']++;
+	}
+	j=lcount(l);
+	if(lcount(l-j)==j)
+	{
+		red(c,l-j);
+		s3[l-j]='\0';
+	}
+	else
+	{
+		red(c,l-j+1);
+		s3[l-j+1]='\0';
+	}
+	l2=strlen(s2);
+	m=s2[0]-'0';
+	cnt=1;
+	for(i=0;i<l2;i++)
+	{
+	c[s2[i]-'0']--;
+	c2[s2[i]-'0']++;
+	}
+	flag=0;
+	for(i=1;i<l2;i++)
+	{
+		if(s2[i]-'0'==m)
+		cnt++;
+		else
+		{
+			if(s2[i]-'0'>m)
+			flag=1;
+			else
+			flag=0;
+		break;
+		}
+	}
+	if(flag==1)
+	{
+		flag2=-1;
+		for(i=1;i<10;i++)
+		{
+			if(c[i]!=0)
+			{
+				if(i>m && m!=0)
+				flag2=1;
+				else if(i==m &&(c2[0]==l2-1||c2[0]+c2[1]==l2))
+				flag2=1;
+				else
+				flag2=0;
+				break;
+			}
+		}
+		if(flag2==-1)
+		{
+			poi=0;
+			for(i=0;i<l2;i++)
+			{
+			s3[i]=s2[i];
+			poi++;	
+			}
+			for(i=0;i<10;i++)
+			{
+				while(c[i]!=0)
+				{
+					s3[poi]=i+'0';
+					c[i]--;
+					poi++;
+				}
+			}			
+		}		
+		if(flag2==0)
+		{
+			poi=0;
+			if(i<=m||m==0||c[0]>0)
+			{
+				s3[0]=i+'0';
+				c[i]--;
+				poi++;
+			}
+				for(i=0;i<10;i++)
+				{
+					if(i<=m)
+					{
+					while(c[i]!=0)
+					{
+						s3[poi]=i+'0';
+						c[i]--;
+						poi++;
+					}
+					}
+					else
+					break;
+				}
+				j=i;
+				for(i=0;i<l2;i++)
+				{
+					s3[poi]=s2[i];
+					poi++;
+				}
+				for(i=j;i<10;i++)
+				{
+					while(c[i]!=0)
+					{
+						s3[poi]=i+'0';
+						c[i]--;
+						poi++;
+					}
+				}
+		}
+		else if(flag2==1)
+		{
+			poi=0;
+			for(i=0;i<l2;i++)
+			{
+			s3[i]=s2[i];
+			poi++;	
+			}
+			for(i=0;i<10;i++)
+			{
+				while(c[i]!=0)
+				{
+					s3[poi]=i+'0';
+					c[i]--;
+					poi++;
+				}
+			}
+		}
+	}
+	else if(flag==0)
+	{
+		flag2=-1;
+		for(i=1;i<10;i++)
+		{
+			if(c[i]!=0)
+			{
+				if(i>m && m!=0)
+				flag2=1;
+				else if(i==m &&(c2[0]==l2-1||c2[1]==2))
+				flag2=1;
+				else
+				flag2=0;
+				break;
+			}
+		}
+		if(flag2==-1)
+		{
+			poi=0;
+			for(i=0;i<l2;i++)
+			{
+			s3[i]=s2[i];
+			poi++;	
+			}
+			for(i=0;i<10;i++)
+			{
+				while(c[i]!=0)
+				{
+					s3[poi]=i+'0';
+					c[i]--;
+					poi++;
+				}
+			}			
+		}
+		if(flag2==0)
+		{
+			poi=0;
+			if(i<m||m==0||c[0]>0)
+			{
+				s3[0]=i+'0';
+				c[i]--;
+				poi++;
+			}
+				for(i=0;i<10;i++)
+				{
+					if(i<m)
+					{
+					while(c[i]!=0)
+					{
+						s3[poi]=i+'0';
+						c[i]--;
+						poi++;
+					}
+					}
+					else
+					break;
+				}
+				j=i;
+				for(i=0;i<l2;i++)
+				{
+					s3[poi]=s2[i];
+					poi++;
+				}
+				for(i=j;i<10;i++)
+				{
+					while(c[i]!=0)
+					{
+						s3[poi]=i+'0';
+						c[i]--;
+						poi++;
+					}
+				}
+		}
+		else if(flag2==1)
+		{
+			poi=0;
+			for(i=0;i<l2;i++)
+			{
+			s3[i]=s2[i];
+			poi++;	
+			}
+			for(i=0;i<10;i++)
+			{
+				while(c[i]!=0)
+				{
+					s3[poi]=i+'0';
+					c[i]--;
+					poi++;
+				}
+			}
+		}
+		
+	}
+	printf("%s\n",s3);
+	return 0;
+}
+int lcount(int l)
+{
+	int j=0;
+	while(l>0)
+	{
+		l=l/10;
+		j++;
+	}
+	return j;
+}
+void red(int *c,int n)
+{
+	int j;
+	while(n>0)
+	{
+	j=n%10;
+	c[j]--;
+	n=n/10;		
+	}
+	return;
+}

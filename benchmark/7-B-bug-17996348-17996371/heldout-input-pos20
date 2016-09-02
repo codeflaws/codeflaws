@@ -1,0 +1,48 @@
+87 15
+alloc 82
+erase 2
+alloc 19
+defragment
+alloc 18
+defragment
+defragment
+defragment
+erase 4
+alloc 19
+erase 4
+erase 3
+defragment
+defragment
+defragment
+alloc 100
+alloc 10
+alloc 68
+alloc 46
+erase 2
+alloc 38
+alloc 91
+defragment
+erase 9
+defragment
+defragment
+erase -1205211982
+erase 7
+alloc 5
+alloc 5
+alloc 72
+defragment
+erase -1297447438
+defragment
+erase 3
+defragment
+defragment
+defragment
+alloc 71
+defragment
+defragment
+alloc 64
+erase 6
+defragment
+alloc 96
+erase 1
+e...

@@ -1,0 +1,3 @@
+2
+cd /test/../test/../test/../test/../a/b/c/..
+pwd

@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main(int argc, char *argv[])
+{
+long int i,x[8],y[8],ar1[8],ar2[8],j,t,c1=0,c2=0,p,q,k=0,z=0,a[8],b[8],cnt=0;
+for(i=0;i<8;i++)
+{scanf("%ld %ld",&x[i],&y[i]);
+a[i]=x[i];
+b[i]=y[i];}
+for(i=0;i<8;i++)
+{for(j=i;j<8;j++)
+{if(x[i]>x[j])
+{t=x[i];
+x[i]=x[j];
+x[j]=t;}
+if(y[i]>y[j])
+{t=y[i];
+y[i]=y[j];
+y[j]=t;}}}
+for(i=0;i<8;i++)
+{if(i==0)
+{c1++;
+c2++;
+ar1[k++]=x[0];
+ar2[z++]=y[0];}
+else
+{if(x[i]!=x[i-1])
+{ar1[k++]=x[i];
+c1++;}
+if(y[i]!=y[i-1])
+{ar2[z++]=y[i];
+c2++;}}}
+if(c1!=3||c2!=3)
+printf("ugly");
+else
+{for(i=0;i<3;i++)
+{for(j=0;j<3;j++)
+{if(i!=1||j!=1)
+{for(k=0;k<8;k++)
+{if(a[k]==ar1[i]&&b[k]==ar2[j])
+{cnt++;
+break;}}}}}
+if(cnt==8)
+printf("respectable");
+else
+printf("ugly");
+}
+for(i=0;i<8;i++)
+    printf("%ld %ld\n",x[i],y[i]);
+return(0);
+}

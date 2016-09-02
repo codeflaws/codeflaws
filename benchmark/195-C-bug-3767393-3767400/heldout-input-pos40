@@ -1,0 +1,4 @@
+3
+try
+throw(tryC)
+catch(tryC, "bad boy")

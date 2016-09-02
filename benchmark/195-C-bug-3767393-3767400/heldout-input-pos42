@@ -1,0 +1,4 @@
+3
+try
+ throw(try)
+catch(try,"haha")

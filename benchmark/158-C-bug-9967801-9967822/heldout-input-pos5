@@ -1,0 +1,10 @@
+9
+cd test
+pwd
+cd ..
+cd /test
+pwd
+cd ..
+pwd
+cd test/test
+pwd

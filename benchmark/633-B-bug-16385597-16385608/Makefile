@@ -1,0 +1,10 @@
+FILENAME=633-B-16385597
+CC=gcc
+CFLAGS=-std=c99 -fno-optimize-sibling-calls -fno-strict-aliasing -fno-asm -std=c99
+LDFLAGS=-lm -s -O2
+all:
+	$(CC) $(CFLAGS) -c $(FILENAME).c -o $(FILENAME).o
+	$(CC) $(FILENAME).o -o $(FILENAME) $(LDFLAGS)
+.PHONY: clean
+clean:
+	rm -f *.o $(FILENAME)

@@ -1,0 +1,4 @@
+3 1
+erase -1
+erase 0
+erase -2147483648

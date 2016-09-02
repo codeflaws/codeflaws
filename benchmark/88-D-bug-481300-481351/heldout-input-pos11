@@ -1,0 +1,16 @@
+15
+typedef &void pt
+typeof pt
+typeof pt*
+typedef pt**** err
+typeof err
+typeof &err
+typeof err*
+typedef &void*** pt
+typeof err
+typeof &err
+typeof err*
+typeof pt
+typeof pt*
+typeof &&pt*
+typeof &&&pt

@@ -1,0 +1,4 @@
+   #   include <cstdio>
+usingnamespacestd;intmain(){puts("Hello#World");#
+#
+}

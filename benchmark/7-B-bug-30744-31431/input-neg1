@@ -1,0 +1,7 @@
+6 1
+defragment
+alloc 10
+alloc 1
+erase -1
+erase 1
+erase 1
