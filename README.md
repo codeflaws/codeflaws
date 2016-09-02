@@ -1,8 +1,8 @@
 # Codeflaws
 The Codeflaws benchmark is a collection of C programs with 4085 defects. Each defect are  where the dataset is crawled from [Codeforces](http://codeforces.com/)
 
-##Structure of each folder
-Each folder is named using the following convention: 
+##Structure of each subject folder
+All the subject programs are in the benchmark directory. Each subject folder is named using the following convention: 
 &lt;contestid&gt;-&lt;problem&gt;-bug-&lt;buggy-submisionid&gt;-&lt;accepted-submissionid&gt;
 Each folder contains:
 - Buggy submission with name &lt;contestid&gt;-&lt;problem&gt;-&lt;buggy-submisionid&gt;.c
