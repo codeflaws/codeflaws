@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script to run spr on subjects in codeflaws directory
 rootdir="/home/ubuntu/codeforces-crawler/CodeforcesSpider" #directory of this script
 rundir="$rootdir/spr-run" # directory in which spr is called from
 versiondir="$rootdir/codeflaws" #root directory for the codeflaws versions
