@@ -1,0 +1,22 @@
+--no-rep-cache
+--no-test-cache
+--label-repair
+--sanity yes
+--multi-file
+--search ww
+--compiler-command perl compile.pl __EXE_NAME__ > build.log
+--test-command timeout -k 50s 50s __TEST_SCRIPT__ __TEST_NAME__ >/dev/null
+--crossover subset
+--rep cilpatch
+--suffix-extension .c
+--describe-machine
+--program bugged-program.txt
+--prefix preprocessed
+--seed 0
+--test-script ./test-genprog.sh
+--popsize 40
+--generations 10
+--promut 1
+--mutp 0
+--fitness-in-parallel 1
+--rep-cache default.cache
