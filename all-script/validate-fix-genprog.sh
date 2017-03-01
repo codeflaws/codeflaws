@@ -18,7 +18,7 @@ runalltest(){
          i="$1"
          origversion="$2"
          goldenpass="$3"
-         filen=$validdir/test-genprog-valid.sh
+         filen=$validdir/test-valid.sh
 	 passt=0
 	 failt=0
 	 totalt=0
@@ -43,7 +43,7 @@ runalltest(){
            fi
          fi
          pkill $cexefile
-         pkill test-genprog-valid.sh
+         pkill test-valid.sh
          echo "$passt"
 }
 

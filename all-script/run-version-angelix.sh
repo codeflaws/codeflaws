@@ -195,8 +195,8 @@ if [[ "$line" == *"-bug-"* ]]; then
        buggyTestCases+="$n "
     done
 
-    # Retrieve test cases from test-angelix-valid.sh
-    testAngelixValid="$BUGGY_DIR/test-angelix-valid.sh"
+    # Retrieve test cases from test-valid.sh
+    testAngelixValid="$BUGGY_DIR/test-valid.sh"
     goldenPositiveCases=($(grep -E "p[0-9]+\)" $testAngelixValid | cut -d')' -f 1))
     goldenNegativeCases=($(grep -E "n[0-9]+\)" $testAngelixValid | cut -d')' -f 1))
     goldenTestCases=""
@@ -636,7 +636,7 @@ if [[ "$line" == *"-bug-"* ]]; then
 
     
     # Patched, Golden, and Result Field
-    # Validate the patch for all test cases (run test-angelix-valid.sh)
+    # Validate the patch for all test cases (run test-valid.sh)
     if [ $success -eq 1 ]; then
       echo "+++ Validating patch"
       # Copy the validation program/code out from .angelix/validation
@@ -648,10 +648,10 @@ if [[ "$line" == *"-bug-"* ]]; then
       gCount=0
       for p in "${goldenPositiveCases[@]}"
       do
-        # Run test-angelix-valid.sh on validation code
+        # Run test-valid.sh on validation code
         # Go to validation directory
         cd $VERSION_DIR/validation
-        validateResult="$(timeout -k 50s 50s $VERSION_DIR/validation/test-angelix-valid.sh $p)"
+        validateResult="$(timeout -k 50s 50s $VERSION_DIR/validation/test-valid.sh $p)"
         if echo "$validateResult" | grep -q "Accepted"; then
           accepted=$((accepted+1))
         fi
@@ -659,7 +659,7 @@ if [[ "$line" == *"-bug-"* ]]; then
         # Run test-angelix-valid.sh on golden code
         # Go to golden directory
         cd $VERSION_DIR/$contestnum-$probnum-$goldenfile-golden
-        goldenResult="$(timeout -k 50s 50s $VERSION_DIR/$contestnum-$probnum-$goldenfile-golden/test-angelix-valid.sh $p)"
+        goldenResult="$(timeout -k 50s 50s $VERSION_DIR/$contestnum-$probnum-$goldenfile-golden/test-valid.sh $p)"
         if echo "$goldenResult" | grep -q "Accepted"; then
           gCount=$((gCount+1))
         fi
