@@ -2,7 +2,7 @@
 The Codeflaws benchmark is a collection of C programs with 4085 defects. Each defect are  where the dataset is crawled from [Codeforces](http://codeforces.com/)
 
 ##Download:
-Codeflaws is available for download at [download-link](http://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz)
+Codeflaws is available for download at [tar-link](http://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz)
 
 ##Structure of each subject folder
 All the subject programs are in the benchmark directory. Each subject folder is named using the following convention: 
