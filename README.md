@@ -52,6 +52,22 @@ Use the following files for running Prophet:
 
 
 
+##Citing Codeflaws
+
+If you use Codeflaws in an academic work, we would be really glad if you cite our paper using the following bibtex:
+
+```
+@inproceedings{Tancodeflaws,
+  author    = {Tan, Shin Hwei and Yi, Jooyong and Yulis and Mechtaev, Sergey and Roychoudhury,Abhik},
+  title     = {Codeflaws: A Programming Competition Benchmark for Evaluating Automated Program Repair Tools},
+  booktitle = {ICSE Poster},
+  year      = {2017},
+  note = {To appear}
+}
+```
+
 ##Other information
 For more information/questions about the benchmark, refer to the following website:
 https://codeflaws.github.io/
+
+
