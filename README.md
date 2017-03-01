@@ -19,7 +19,6 @@ Each folder contains:
 - Makefile.genprog for compiling the buggy submission using cilly. This is for GenProg experiments as GenProg works on CIL representation.
 - Test configuration for SPR that specify the name for pass/fail test: &lt;contestid&gt;-&lt;problem&gt;-&lt;buggy-submisionid&gt;.c.revlog
 
-``
 
 ##Script for running each repair tool
 All the files mentioned below are stored in the all-script directory
