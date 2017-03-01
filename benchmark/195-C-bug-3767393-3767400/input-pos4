@@ -1,4 +1,0 @@
-3
-try
-throw(A)
-catch(A, "A cought")

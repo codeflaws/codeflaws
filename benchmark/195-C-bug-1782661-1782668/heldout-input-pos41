@@ -1,8 +1,0 @@
-7
-try
-catch(A,"try A")
-try
- throw(A)
-catch(A,"try B")
-try
-catch(A,"try C")

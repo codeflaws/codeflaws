@@ -1,7 +1,0 @@
-6
-cd a/a/b/b
-pwd
-cd ../..
-pwd
-cd ..
-pwd

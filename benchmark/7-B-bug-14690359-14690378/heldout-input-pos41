@@ -1,8 +1,0 @@
-7 6
-alloc 1
-alloc 2
-alloc 3
-erase 1
-defragment
-erase 3
-alloc 4

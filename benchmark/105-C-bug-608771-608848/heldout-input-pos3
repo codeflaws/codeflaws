@@ -1,8 +1,0 @@
-3
-weapon weapon 10 5 2 4
-armor armor 0 20 0 6
-orb orb 3 4 25 3
-3
-x gladiator 12 armor
-y sentry 13 orb
-z physician 5 weapon
