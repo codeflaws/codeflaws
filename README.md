@@ -59,9 +59,9 @@ If you use Codeflaws in an academic work, we would be really glad if you cite ou
 @inproceedings{Tancodeflaws,
   author    = {Tan, Shin Hwei and Yi, Jooyong and Yulis and Mechtaev, Sergey and Roychoudhury,Abhik},
   title     = {Codeflaws: A Programming Competition Benchmark for Evaluating Automated Program Repair Tools},
-  booktitle = {ICSE Poster},
+  booktitle={2017 IEEE/ACM 39th International Conference on Software Engineering Companion (ICSE-C)}, 
   year      = {2017},
-  note = {To appear}
+  pages = {180-182}
 }
 ```
 
