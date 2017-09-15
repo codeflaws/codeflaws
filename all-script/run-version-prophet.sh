@@ -1,13 +1,14 @@
 #!/bin/bash
 # Script to run prophet on subjects in codeflaws directory
+#The following variables needs to be changed:
 rootdir="/home/ubuntu/codeforces-crawler/CodeforcesSpider" #directory of this script
-rundir="$rootdir/prophet-run" # directory in which prophet is called from
+rundir="$rootdir/prophet-run" # directory in which prophet is called from, a temporary output directory where everything will be copied to during the repair
 versiondir="$rootdir/codeflaws" #root directory for the codeflaws versions
-filename="$rootdir/run1" #tab-separated file containing the list of versions to run as the first field
-prophet="/home/ubuntu/spr/src/prophet" # location of the prophet executable
+filename="$rootdir/run1" #should be a copy of the codeflaws-defect-detail-info.txt, or select several defects from codeflaws-defect-detail-info.txt
+prophet="/home/ubuntu/spr/src/prophet" # location of the installed prophet executable
+
 list=$(cut -d$'\t' -f1 $filename)
-rundir="$rootdir/prophet-run"
-parafile="$rootdir/para-rext-all.out"
+parafile="$rootdir/para-rext-all.out" 
 
 while read -r line; do
 if [[ "$line" == *"-bug-"* ]]; then 
