@@ -5,22 +5,26 @@ The Codeflaws benchmark is a collection of C programs with 4085 defects. Each de
 Codeflaws is available for download at [tar-link](http://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz)
 
 ## How to use codeflaws?
-1. Download codeflaws:
+1. Install the time command:
+```
+sudo apt-get install time
+```
+2. Download codeflaws:
 ```
 wget http://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz
 tar xf codeflaws.tar.gz
 ```
 
-2. Download individual repair tool
-3. Select defects (there are in general 4085 defects) to run by creating a file ``filename`` that is a copy of the ```codeflaws/all-script/codeflaws-defect-detail-info.txt``` file.  
-4. Modify ./run-version-<repair-tool>.sh by setting the appropriate variables. For example, in the ```run-version-genprog.sh``` file, you need to modify the following variables: 
+3. Download individual repair tool
+4. Select defects (there are in general 4085 defects) to run by creating a file ``filename`` that is a copy of the ```codeflaws/all-script/codeflaws-defect-detail-info.txt``` file.  
+5. Modify ./run-version-<repair-tool>.sh by setting the appropriate variables. For example, in the ```run-version-genprog.sh``` file, you need to modify the following variables: 
 ```rootdir="/home/ubuntu/codeforces-crawler/CodeforcesSpider" #directory of this script
 rundir="$rootdir/genprog-run" # directory in which genprog is called from, a temporary output directory where everything will be copied to during the repair
 versiondir="$rootdir/codeflaws" #directory where the codeflaws.tar.gz is extracted
 filename="$rootdir/run1" #should be a copy of the codeflaws-defect-detail-info.txt
 genprog="/home/ubuntu/genprog-source-v3.0/src/repair"
 ```
-5. run the script:
+6. run the script:
 ```./run-version-genprog.sh```
 
 ## Structure of each subject folder
