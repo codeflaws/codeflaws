@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # Script to run angelix on subjects in codeflaws directory
+#The following variables needs to be changed:
 rootdir="/home/ubuntu/codeforces-crawler/CodeforcesSpider" #directory of this script
-versiondir="$rootdir/solutions-short"  # File contains all subjects (buggy code, golden code, and test cases)
-filename="$rootdir/run1"  # File contains list of subjects in versiondir
+versiondir="$rootdir/codeflaws"  # directory where the codeflaws.tar.gz is extracted
+filename="$rootdir/run1"  # should be a copy of the codeflaws-defect-detail-info.txt, or select several defects from codeflaws-defect-detail-info.txt
 currentTime=$(date +"%Y-%m-%d-%H-%M-%S")
-rundir="$rootdir/angelix-run-$currentTime"  # Directory for running the test script
-instrumentprintf="/home/ubuntu/angelix/build/llvm-3.7.0.src/build/bin/instrument-printf"
+rundir="$rootdir/angelix-run-$currentTime"  # Directory for running the test script, a temporary needed to be created as an output directory where everything will be copied to during the repair
 angelixexperimentsdir="/home/ubuntu/angelix-experiments" # directory in which angelix is called from
 log_file="$rundir/test-results.log"  # Log file for result summary
+
 ignore_file="$rootdir/versions-ignored-all.txt"  # File contains list of subjects to be ignored
 angelix_backend_klee_out_0="$angelixexperimentsdir/.angelix/backend/klee-out-0"
 runNewSynthesizer=""  # To store if --use-nsynth option is enabled [applicable to angelix]
@@ -141,10 +142,10 @@ if [[ "$line" == *"-bug-"* ]]; then
     add-header $GOLDEN_DIR/$gfile
  
     # Instrument the printf using instrument-printf command 
-    echo "+++ Instrumenting printf: $bfile"
-    $instrumentprintf $BUGGY_DIR/$bfile --
-    echo "+++ Instrumenting printf: $gfile"
-    $instrumentprintf $GOLDEN_DIR/$gfile -- 
+    #echo "+++ Instrumenting printf: $bfile"
+    #$instrumentprintf $BUGGY_DIR/$bfile --
+    #echo "+++ Instrumenting printf: $gfile"
+    #$instrumentprintf $GOLDEN_DIR/$gfile -- 
     
     # Rename the golden file to buggy filename in golden directory [!!! Ensure the correct instrumented golden code file is used]
     echo -e "+++ Renaming \"$GOLDEN_DIR/$gfile\" to \"$GOLDEN_DIR/$bfile\""
