@@ -1,5 +1,5 @@
 # Codeflaws
-The Codeflaws benchmark is a collection of C programs with 4085 defects. Each defect are  where the dataset is crawled from [Codeforces](http://codeforces.com/)
+The Codeflaws benchmark is a collection of C programs with 3902 defects. Each defect are  where the dataset is crawled from [Codeforces](http://codeforces.com/)
 
 ## Download:
 Codeflaws is available for download at [tar-link](http://www.comp.nus.edu.sg/~release/codeflaws/codeflaws.tar.gz)
@@ -16,7 +16,7 @@ tar xf codeflaws.tar.gz
 ```
 
 3. Download individual repair tool
-4. Select defects (there are in general 4085 defects) to run by creating a file ``filename`` that is a copy of the ```codeflaws/all-script/codeflaws-defect-detail-info.txt``` file.  
+4. Select defects (there are in general 3902 defects) to run by creating a file ``filename`` that is a copy of the ```codeflaws/all-script/codeflaws-defect-detail-info.txt``` file.  
 5. Modify ./run-version-<repair-tool>.sh by setting the appropriate variables. For example, in the ```run-version-genprog.sh``` file, you need to modify the following variables: 
 ```rootdir="/home/ubuntu/codeforces-crawler/CodeforcesSpider" #directory of this script
 rundir="$rootdir/genprog-run" # directory in which genprog is called from, a temporary output directory where everything will be copied to during the repair
